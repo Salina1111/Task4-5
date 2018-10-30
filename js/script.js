@@ -53,3 +53,19 @@ function uppercase(str)
 }
 console.log(uppercase("say hello"));
 alert(uppercase('say hello'));
+
+//Chunk Array
+function chunkArray(myArray, chunk_size){
+    var results = [];
+    
+    while (myArray.length) {
+        results.push(myArray.splice(0, chunk_size));
+    }
+    
+    return results;
+}
+
+// Split in group of 2 items
+var result = chunkArray([1,2,3,4,5,6,7,8], 2);
+
+console.log(result);
