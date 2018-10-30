@@ -39,3 +39,17 @@ function reverse(num) {
 console.log(reverse(12345));
 
 alert(reverse(12345));
+
+//Capitalize first letter
+function uppercase(str)
+{
+  var a1 = str.split(' ');
+  var a2 = [];
+    
+  for(var x = 0; x < a1.length; x++){
+      a2.push(a1[x].charAt(0).toUpperCase()+a1[x].slice(1));
+  }
+  return a2.join(' ');
+}
+console.log(uppercase("say hello"));
+alert(uppercase('say hello'));
