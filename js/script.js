@@ -21,3 +21,4 @@ function reverseString(str) {
     }
 return b;
 }
+reverseString("salina");
