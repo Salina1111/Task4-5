@@ -73,11 +73,39 @@ console.log(result);
 //FizzBuzz
 for (var i=1; i <= 100; i++){
     if (i % 3 == 0){
-         console.log("Fizz");
+        console.log("Fizz");
+    }
+    else if(i % 5 == 0) {
+        console.log("Buzz");
+    }
+    else
+    console.log(i);
+}
+
+//maximum character
+
+function maxCharacter(str) {
+    const a = {};
+    let maxNum = 0;
+    let maxChar = '';
+    
+    str.split('').forEach((c) => {
+        if (a[c]) {
+            a[c]++; // This will add 1
+        } else { // If no letter has been found yet
+            a[c] = 1;
         }
-     else if(i % 5 == 0) {
-          console.log("Buzz");
+    });
+    
+    for (let c in a) {
+        if (a[c] > maxNum) {
+            maxNum = a[c];
+            maxChar = c;
         }
-     else
-      console.log(i);
- }
+    }
+    return (maxChar+" = "+maxNum);
+}
+
+const output = maxCharacter('lollipop');
+
+console.log(output);
