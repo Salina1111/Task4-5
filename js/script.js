@@ -119,3 +119,4 @@ function array(s){
 }
 
 console.log(array(12345));
+
